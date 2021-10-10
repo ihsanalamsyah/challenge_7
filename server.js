@@ -9,6 +9,8 @@ const { port = 8000 } = process.env;
 // saat dipostman kita isi data-nya pake x-www-form-urlencoded
 app.use(express.urlencoded({ extended: false }));
 
+app.use(express.json());
+
 // setting session handlernya
 // (session ini harus diatas inisialisasi passport (passport.initialize()))
 app.use(session ( {

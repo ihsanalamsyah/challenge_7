@@ -43,6 +43,7 @@ module.exports = (sequelize, DataTypes) => {
       const token = jwt.sign( payload, rahasia)
       return token
     }
+
     
     //proses authentikasi, mencocokan username dan password
     static authenticate = async ({username, password}) => {
@@ -62,7 +63,7 @@ module.exports = (sequelize, DataTypes) => {
         return Promise.reject(err)
       }
     }
-    
+  
   };
   
   User.init({

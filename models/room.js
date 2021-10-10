@@ -15,20 +15,29 @@ module.exports = (sequelize, DataTypes) => {
 
 
     // Buat fungsi create-room
-    static createRoom = ({ nama_room }) => {
+    static createRoom = async ({ nama_room }) => {
   
       return this.create({ nama_room })
   
     }
-  }
+    
+    checkChoice1 = (choice1) =>{
+      return choice1 ='gunting'
+    }
 
+
+    static main = async ({ choice1, choice2 }) =>{
+    
+    
+    }
+  }
 
   Room.init({
     nama_room: DataTypes.INTEGER,
     player1: DataTypes.STRING,
     player2: DataTypes.STRING,
-    choice1: DataTypes.STRING,
-    choice2: DataTypes.STRING
+    choice1: DataTypes.ARRAY( DataTypes.STRING),
+    choice2: DataTypes.ARRAY( DataTypes.STRING)
   }, {
     sequelize,
     modelName: 'Room',
