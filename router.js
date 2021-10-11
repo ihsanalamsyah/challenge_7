@@ -6,13 +6,13 @@ const auth = require('./controllers/authController');
 const adminOnly = require('./middlewares/adminOnly');
 const restrict = require('./middlewares/restrict');
 
-router.get('/', restrict, (req, res) => res.render('index'));
+router.get('/', restrict, (req, res) => res.render('ch7/index'));
 
-router.get('/register', (req, res) => res.render('register'))
+router.get('/register', (req, res) => res.render('ch7/register'))
 router.post('/register', auth.register)
 
 
-router.get('/login', (req, res) => res.render('login'));
+router.get('/login', (req, res) => res.render('ch7/login'));
 
 router.post('/login', auth.login);
 

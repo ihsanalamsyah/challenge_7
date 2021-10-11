@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <Title>
+      User | Update
+    </Title>
+  </head>
+
+  <body>
+    <form method="POST" action="/users/update/<%= user_games.id %>">
+      <label for="username">
+        Username
+      </label>
+      <br>
+      <input type="text" name="username" value="<%= user_games.username %>">
+      <br>
+
+      <label for="email">
+        Email
+      </label>
+      <br>
+      <input type="text" name="email" value="<%= user_games.email %>">
+      <br>
+
+      <label for="password">
+        Password
+      </label>
+      <br>
+      <input type="text" name="password" value="<%= user_games.password %>">
+      <br>
+
+      <button type="submit">
+        Submit
+      </button>
+    </form>
+  </body>
+</html>

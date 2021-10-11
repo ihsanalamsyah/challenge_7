@@ -1,0 +1,42 @@
+<!-- views/articles/create.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Biodata | Create</title>
+</head>
+<body>
+    <!-- mengirim datanya dengan method post ke halaman /usersBiodata -->
+    <form method="POST" action="/usersBiodata">
+        <label for="user_id">User ID</label>
+        <br>
+        <!-- input berupa text dapat di baca dengan req.body.user_id -->
+        <input type="text" name="user_id"/>
+        <br>
+
+        <label for="name">Nama Panjang</label>
+        <br>
+        <!-- input berupa text dapat di baca dengan req.body.name -->
+        <input type="text" name="name"/>
+        <br>
+        
+        <label for="umur">Umur</label>
+        <br>
+        <!-- input berupa text dapat di baca dengan req.body.umur -->
+        <input type="text" name="umur"/>
+        <br>
+
+        <label for="pekerjaan">Pekerjaan</label>
+        <br>
+        <!-- input berupa text dapat di baca dengan req.body.pekerjaan -->
+        <input type="text" name="pekerjaan"/>
+        <br>
+
+        <button type="submit">Submit</button>
+    </form>
+    
+</body>
+</html>

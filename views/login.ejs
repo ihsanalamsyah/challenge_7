@@ -1,30 +1,32 @@
+<!-- login.ejs -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form</title>
+    
+    <title>User | Login</title>
 </head>
 <body>
-    
-<!-- Code ini berjalan saat error -->
 
-    <% if (messages.error) { %>
-        <h5> <%= messages.error %></h5>
-    <% } %>
+<div style="background-color: #9C835F;">
+    <h1>Login</h1>
 
-    <form method="POST" action="/login">
-        <label for="username">Username</label>
-        <br>
-        <input type="text" name="username" placeholder="Insert your username">
-        <br>
+        <form action="/login" method="POST">
+            <label for="email">Email</label>
+            <br>
+            <input type="email" name="email" placeholder="Enter email">
+            <br>
 
-        <label for="password">Password</label>
-        <br>
-        <input type="password" name="password" placeholder="Insert your password">
-        <br>
+            <label for="password">Password</label>
+            <br>
+            <input type="password" name="password" placeholder="Enter password">
+            <br>
 
-        <button type="submit">Login</button>
-    </form>
+            <button type="submit" style="background: rgb(236, 180, 76);">Login</button>
+
+        </form>
+</div>
 </body>

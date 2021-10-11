@@ -1,0 +1,51 @@
+<!-- views/articles/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User | All</title>
+</head>
+<body>
+    <!-- 
+    lakukan looping untuk mendapatkan semua datanya
+    akan melakukan perulangan berarti dalam bentuk array
+    <%  %> untuk membuat javascript
+    setiap i akan kita cetak berupa isi dari <div>
+    dengan menulis <%=  %> berarti kita ingin mencetak "isinya" bukan logic javascript
+    user_games.forEach i = mengambil data user_games dari index.js dan menjadikan array datanya setiap i
+    -->
+
+    <div>
+        <h1>Database User</h1>
+        <table border="1" cellpadding="7">
+                <tr>
+                    <td><p>ID</p></td>
+                    <td><p>Username</p></td>
+                    <td><p>Email</p></td>
+                    <td><p>Password</p></td>
+                    <td><p>Details</p></td>
+                    <td><p>Update</p></td>
+                    <td><p>Delete</p></td>
+                </tr>
+            <% user_games.forEach(i => { %>
+                <tr>
+                    <td><p><%= i.id %></p></td>
+                    <td><p><%= i.username %></p></td>
+                    <td><p><%= i.email %></p></td>
+                    <td><p><%= i.password %></p></td>
+                    <td><a href="/users/<%= i.id %>">Details</a></td>
+                    <td><a href="/users/update/<%= i.id %>">Update user</a></td>
+                    <td><a href="/users/delete/<%= i.id %>">Delete user</a></td>
+                </tr>
+            <% } ) %>
+        </table>
+        <!-- ini harus dibuat untuk menutup kurung karena berupa javascript -->
+    </div>
+
+   <h2><a href="/users/create">Buat user baru</a></h2>
+
+</body>
+</html>
