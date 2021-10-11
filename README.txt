@@ -1,7 +1,7 @@
 untuk mengakses MVC
 
 - ketik npm start di terminal\
-- ketik localhost:3000/\
+- ketik localhost:8000/\
 - klik TRIAL jika ingin main game sederhana :D\
 - klik Login untuk mengelola database\
 - untuk id password ada di file db ejs \
@@ -12,12 +12,12 @@ untuk mengakses MVC
 
 untuk mengakses MCR
 
-- ketik npm start di terminal\
+- ketik npm server di terminal\
 - buka postman
-- ketik localhost:3000/daftar untuk membuat akun
-- lalu login di localhost:3000/masuk
+- ketik localhost:8000/api/v1/auth/register untuk membuat akun
+- lalu login di localhost:8000/api/v1/auth/login
 - salin token yang di dapat dan masukan ke value di header dan jangan lupa tulis "Authorization" di key header
-- lalu ketik localhost:3000/room untuk membuat room bermain
+- lalu ketik localhost:8000/api/v1/auth/create-room untuk membuat room bermain
 
 pembagian tugas 
 
